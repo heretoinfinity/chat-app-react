@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   createSocket() {
-    let cable = Cable.createConsumer('ws://localhost:3001/cable');
+    let cable = Cable.createConsumer('https://quiet-sierra-79544.herokuapp.com/');
     this.chats = cable.subscriptions.create({
       channel: 'ChatChannel'
     }, {
